@@ -1,0 +1,26 @@
+
+<div class="sign-in">
+   <button class="close" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+  <br />
+
+<%= link_to "Sign in with Facebook", "/auth/facebook", :class=>"btn btn-primary" %>
+
+<hr>
+
+
+<h3>Log in</h3>  
+  
+ <%=  form_for :user, id: "sign-in",:validate => true, url: log_in_user_path  do |f| %>
+  <p>  
+    <%= label_tag :email %><br />  
+    <%= text_field_tag :email, params[:email] %>  
+  </p>  
+  <p>  
+    <%= label_tag :password %><br />  
+    <%= password_field_tag :password %>  
+  </p>  
+  <br />
+  <p class="button"><%= submit_tag 'Log in'%></p>  
+
+<% end %>  
+</div>

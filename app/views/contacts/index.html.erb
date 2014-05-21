@@ -1,0 +1,25 @@
+<li><%= link_to 'Back', new_contact_path, :class=>"btn btn-default pull-right" %>
+<h3 class="page-header"> Contacts List </h3>
+ <%= paginate @contacts %>
+  
+<div class="row">
+  <% @contacts.each do |contact| %>
+    <div class="col-sm-4">
+      <div class="well well-sm">
+
+        <strong> First Name: <%= contact.firstname %></strong><br />
+       <strong> Last Name: <%= contact.lastname %></strong> <br />
+        <strong>Email:</strong> <%= contact.email %><br />
+        <strong>Phone Number:</strong> <%= contact.phonenumber %>.
+        <div>
+        <%= link_to 'Show', contact_path(contact) %> |
+        <%= link_to 'Edit', edit_contact_path(contact) %> |
+        <%= link_to 'Destroy',contact,data: { confirm: 'Are you sure?' },:method => :delete %>
+        </div>
+        </div>
+
+    </div>
+  <% end %>
+
+</div>
+<hr>
