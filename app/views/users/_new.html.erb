@@ -1,25 +1,18 @@
 <div class="signup">
-
-
-   <button class="close" aria-hidden="true" data-dismiss="modal" type="button">×</button>
-
-          <br />
-
-
-  
-<h3>Sign Up</h3>
-<hr>
-
-<%= form_for @user,  :validate => true do |f| %>
+  <button class="close" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+  <br />
+  <h3>Sign Up</h3>
+  <hr>
+  <%= form_for @user,  :validate => true do |f| %>
   <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% for message in @user.errors.full_messages %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
   <% end %>
   <p>
     <%= f.label :First_name %><br />
@@ -64,7 +57,6 @@
   <br />
   <br />
   <p class="button"><%= f.submit %></p>
-<% end %>
-<br />
-
+  <% end %>
+  <br />
 </div>

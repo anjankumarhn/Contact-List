@@ -1,18 +1,18 @@
 class SessionsController < ApplicationController
   respond_to :html, :js
-	def new
+  def new
     
   end
 
   def create
     if params[:provider]
-    user = User.from_omniauth(env["omniauth.auth"])
+      user = User.from_omniauth(env["omniauth.auth"])
     else
-    user = User.authenticate(params[:email], params[:password]) 
+      user = User.authenticate(params[:email], params[:password]) 
     end 
     if user  
       session[:user_id] = user.id  
-       flash[:alert] = "you are successfully logged in "
+      flash[:alert] = "you are successfully logged in "
       redirect_to new_contact_path 
     else  
       flash.now.alert = "Invalid email or password"  

@@ -1,10 +1,10 @@
 class ContactsController < ApplicationController
-     before_filter :require_login
+	before_filter :require_login
 
 	def index
 		#@contacts = Contact.all
-		 @contacts = Contact.search(params[:search]).order("firstname").page(params[:page]).per(9)
-		end
+		@contacts = Contact.search(params[:search]).order("firstname").page(params[:page]).per(9)
+	end
 
 	def show
 		@contact = Contact.find(params[:id])
@@ -41,7 +41,7 @@ class ContactsController < ApplicationController
 
 	def destroy
 		@contact = Contact.find(params[:id])
-	    @contact.destroy
+		@contact.destroy
 
 		redirect_to contacts_path
 	end

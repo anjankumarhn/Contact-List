@@ -21,7 +21,7 @@
  	background-image: url("back.jpg");
  	background-repeat:no-repeat;
  	padding-top: 50px;
-    padding-bottom: 20px;
+ 	padding-bottom: 20px;
  }
  .modal
  {
@@ -32,16 +32,16 @@
  {
  	min-height: 500px;
  }
-.signup
+ .signup
  {
-    background-color:#F0FFF0;
-    text-align: center;
+ 	background-color:#F0FFF0;
+ 	text-align: center;
  	width:600px;
  	margin-left: 380px;
  }
-.login
+ .login
  {
-	background-color:  #5cb85c;
+ 	background-color:  #5cb85c;
  	text-align: center;
  	width:300px;
  	margin-left: 380px;
@@ -52,7 +52,7 @@
  {
  	margin-top: 100px;
  }
-.fbg
+ .fbg
  {
  	background-color: #FAEBD7;
  	text-align: center;
@@ -61,7 +61,7 @@
  	border-radius: 25px;
  	float:left;
  }
-.msg
+ .msg
  {
  	border:2px solid black;
  	width:250px;
@@ -69,22 +69,22 @@
  	background-color: #FFFFE0;
  	text-align: center;
  }
-.fff
+ .fff
  {
-	text-align: center;
-	margin-top: 10px;
+ 	text-align: center;
+ 	margin-top: 10px;
  }
-.sign-in
-{
-	background-color:#F0FFF0;
-	height:400px;
-	width:300px;
-	margin-left: 500px;
-	margin-top: 150px;
+ .sign-in
+ {
+ 	background-color:#F0FFF0;
+ 	height:400px;
+ 	width:300px;
+ 	margin-left: 500px;
+ 	margin-top: 150px;
  }
  .com-box
  {
  	float:right;
  }
-.fb-comments{width: 600px; height: 400px; overflow: auto}
-.fb-comments span, .fb-comments iframe { width: 100% !important; }
+ .fb-comments{width: 600px; height: 400px; overflow: auto}
+ .fb-comments span, .fb-comments iframe { width: 100% !important; }

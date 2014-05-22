@@ -1,28 +1,17 @@
 <div class="signup">
-
-          <br />
-
-
-
-<h1>Sign Up</h1>
-<br />
-
-<%= form_for @user do |f| %>
+  <br />
+  <h1>Sign Up</h1>
+  <br />
+  <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
-    
-
-
-
-
-
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% for message in @user.errors.full_messages %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
   <% end %>
   <p>
     <%= f.label :First_name %><br />
@@ -67,7 +56,6 @@
   <br />
   <br />
   <p class="button"><%= f.submit %></p>
-<% end %>
-<br />
-
+  <% end %>
+  <br />
 </div>

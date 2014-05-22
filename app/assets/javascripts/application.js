@@ -21,7 +21,6 @@
 //= require event
 //= require friends
 //= require utility
-
 //= require infinite
 
 

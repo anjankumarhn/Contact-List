@@ -6,13 +6,12 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %> 
-     <script src="http://connect.facebook.net/en_US/all.js"></script>
-     
-  <style type="text/css">
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
+    
+    <style type="text/css">
     </style>
   </head>  
   <body>
-    
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id = "hdd">
       <div class="container">
         <div class="navbar-header">
@@ -34,57 +33,43 @@
             </li>
           </ul>
           <% if current_user %>
-          
-          
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Invite your Facebook friends", "#", :id => "invite_fb_friends", :class => "btn btn-primary" %>
-
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><%= link_to 'My profile', log_out_path %></li>
-                <li><%= link_to 'Settings', log_out_path,:method => :delete  %></li>
-                <li><%= link_to 'Log out', log_out_path,:method => :delete %></li>
-
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to 'My profile', log_out_path %></li>
+                  <li><%= link_to 'Settings', log_out_path,:method => :delete  %></li>
+                  <li><%= link_to 'Log out', log_out_path,:method => :delete %></li>
+                </ul>
+              </li>
+              <% else %>
+              <ul>
+                <li><%= link_to 'Sign up',  new_user_path, remote: true, :class=>"btn btn pull-right"  %>  
+                  <%= link_to 'Sign in', new_session_path, remote: true, :class=>"btn pull-right"  %> </li>
+                  <% end %>
+                </ul>
               </ul>
-            </li>
-            <% else %>
-            <ul>
-            <li><%= link_to 'Sign up',  new_user_path, remote: true, :class=>"btn btn pull-right"  %>  
-            <%= link_to 'Sign in', new_session_path, remote: true, :class=>"btn pull-right"  %> </li>
-            <% end %>
-          </ul>
-        </ul>
-
-        </nav>
+            </nav>
+          </div>
+        </div>  
+      </div>  
+      <% flash.each do |name, msg| %>
+      <div class="msg">
+        <button type="button" class="close" aria-hidden="true">&times;</button>
+        <%= content_tag :div, msg, :id => "flash#{name}" %>
       </div>
-    </div>  
-  </div>  
-  <% flash.each do |name, msg| %>
-  <div class="msg">
-    <button type="button" class="close" aria-hidden="true">&times;</button>
-    <%= content_tag :div, msg, :id => "flash#{name}" %>
-  </div>
-  <% end %>
-  <div class="container"> 
-    <%= yield %> 
-    <div class="content">
-      
-    </div>
-    <div id="product-modal" class="modal fade">
-    </div>
-     </div> 
-    <hr>
-    <footer>
-      &copy; Copyright 2014
-    </footer>
- 
-</body>  
-</html>  
-
-
-
-
-
-
+      <% end %>
+      <div class="container"> 
+        <%= yield %> 
+        <div class="content">
+        </div>
+        <div id="product-modal" class="modal fade">
+        </div>
+      </div> 
+      <hr>
+      <footer>
+        &copy; Copyright 2014
+      </footer>
+    </body>  
+    </html>  

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  get 'home/authorize'
+   
   get 'welcome/index'
  
   resources :sessions
@@ -12,9 +11,6 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('welcome/index')
-
-
-
   post "log_in_user" => "sessions#create", :as => "log_in_user"
   delete "log_out" => "sessions#destroy", :as => "log_out"
   post "sign_up_user" => "users#create", :as => "sign_up_user"

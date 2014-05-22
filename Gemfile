@@ -41,5 +41,4 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 # gem 'debugger', group: [:development, :test]
 gem 'kaminari'
 gem 'bootstrap-sass', '~> 2.3.2'
-gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'

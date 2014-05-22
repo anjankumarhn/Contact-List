@@ -157,7 +157,6 @@ DEPENDENCIES
   jquery-rails
   jquery-validation-rails
   kaminari
-  omniauth
   omniauth-facebook (= 1.4.0)
   rails (= 4.1.0)
   sass-rails (~> 4.0.3)

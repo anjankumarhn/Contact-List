@@ -1,10 +1,6 @@
-
-
 <div class="login">
-
-<h1>Log in</h1>  
-  
- <%=  form_for :user, url: log_in_user_path do |f| %>
+  <h1>Log in</h1>  
+  <%=  form_for :user, url: log_in_user_path do |f| %>
   <p>  
     <%= label_tag :email %><br />  
     <%= text_field_tag :email, params[:email] %>  
@@ -16,5 +12,5 @@
   <br />
   <br />
   <p class="button"><%= submit_tag 'Log in'%></p>  
-<% end %>  
+  <% end %>  
 </div>
