@@ -17,7 +17,6 @@
 //= require bootstrap.min
 //= require bootstrap
 //= require jquery.validate
-//= require jquery.form
 //= require event
 //= require friends
 //= require utility
